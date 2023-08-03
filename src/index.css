@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base{
+    body{
+        @apply font-[Raleway];
+    }
+    li{
+        @apply px-4;
+        @apply cursor-pointer
+    }
+}
+
+/* Start Navbar */
+.nav-link{
+    
+    color: #E8CEBF !important;
+
+    position: relative;
+}
+.nav-link .active{
+    color:#3D8DAE;
+}
+.nav-link::before,.nav-link::after{
+        content: '';
+        width: 100%;
+        height: 2px;
+
+        /* border-top: 2px solid #E4A9A8;
+        border-bottom: 2px solid #E4A9A8; */
+
+        background-color: #FF90BB;
+
+        position: absolute;
+        left: 0;
+
+        transform: scaleX(0);
+
+        transition: all 0.5s;
+
+}
+.nav-link::before{
+    top:-4px;
+    transform-origin: left;
+}
+.nav-link::after{
+    bottom: -4px;
+    transform-origin: right;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after{
+        transform: scaleX(1);
+}
+
+/* End Navbar */
+
+.bannerparas{
+    animation-name: bnanis;
+    animation-duration: 3s;
+    animation-delay: .3s;
+    animation-fill-mode: backwards;
+}
+@keyframes bnanis {
+    from{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+
+.title-word {
+    animation: color-animation 5s linear infinite;
+    
+  }
+  
+  .title-word-1 {
+    --color-1: #FF2171;
+    --color-2: #3D8DAE;
+    --color-3: #FF90BB;
+  }
+  
+  .title-word-2 {
+    --color-1: #E1AEFF;
+    --color-2: #FF2171;
+    --color-3: #FF90BB;
+  }
+  
+  .title-word-3 {
+    --color-1: #FF90BB;
+    --color-2: #FF2171 ;
+    --color-3: #3AA6B9;
+  }
+  
+  
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+
+  .content-div{
+    /* width:390px; */
+    height: 215px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position-y: center; */
+    
+    /* object-fit: cover; */
+    
+  }
+  .content-div:hover{
+    background-image: linear-gradient(
+        to right,
+        #003F5C,
+        #472B62
+    )!important;
+    transition: all 2s;
+  }
