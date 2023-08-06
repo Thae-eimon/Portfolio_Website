@@ -11,10 +11,13 @@ const About = () => {
     
     <div name="about" className='w-full h-screen bg-[#0a192f] text-gray-300'>
         <div className="w-full h-full flex flex-col justify-center items-center">
-            <motion.div className='text-container'
-            initial={{x:500,opacity:0,scale:0}}
-            whileInView={{opacity:1,x:0,scale:1}}
-            transition={{duration:0.6}}
+        <motion.div className='text-container'
+            initial={{opacity: 0, scale: 0.2}}
+            animate={{ y: [300], opacity: 1, scale: 1 }}
+            whileInView={{opacity:1,y:0}}
+            transition={{duration: 4,
+              delay: 0.2,
+              }}
             viewport={{once:true}}
             
             >
