@@ -12,15 +12,16 @@ const Home = () => {
       
     <div name="home" className='w-full h-screen bg-[#0a192f] position-relative '>
         {/* container */}
-        <div className='max-w-[1000px] mx-auto h-full  flex flex-col justify-center px-8 postion-abosolute md:top-[30%]  '>
+        <div className='max-w-[1000px] mx-auto h-full  flex flex-col justify-center px-8   '>
         
         <motion.div className='text-container'
             initial={{opacity: 0, scale: 0.3}}
-            animate={{ x: [150], opacity: 1, scale: 1 }}
+            animate={{ x: [150,50,100], opacity: 1, scale: 1 }}
             whileInView={{opacity:1,x:0}}
-            transition={{duration: 5,
-              delay: 0.3,
-              ease: [0.5, 0.71, 1, 1.5],}}
+            transition={{duration: 4,
+              delay: 0.2,
+              
+            }}
             viewport={{once:true}}
             
             >
