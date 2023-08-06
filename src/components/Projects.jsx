@@ -9,15 +9,15 @@ import {Tilt} from 'react-tilt'
 import {motion} from 'framer-motion'
 
 const defaultOptions = {
-	reverse:        true,  // reverse the tilt direction
-	max:            30,     // max tilt rotation (degrees)
-	perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
-	scale:          1,    // 2 = 200%, 1.5 = 150%, etc..
-	speed:          1000,   // Speed of the enter/exit transition
-	transition:     true,   // Set a transition on enter/exit.
-	axis:           null,   // What axis should be disabled. Can be X or Y.
-	reset:          true,    // If the tilt effect has to be reset on exit.
-	easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+	reverse:        true,  
+	max:            30,     
+	perspective:    1000,  
+	scale:          1,    
+	speed:          1000,   
+	transition:     true,   
+	axis:           null,   
+	reset:          true,    
+	easing:         "cubic-bezier(.03,.98,.52,.99)",    
 }
 
 
@@ -26,12 +26,12 @@ const Projects = () => {
 
     
     
-    <div name="project" id='projects' className='w-full md:h-screen bg-[#0a192f] text-gray-300'>
-        <div className='w-full h-full max-w-[1300px] mx-auto p-3 flex flex-col justify-center '>
+    <div name="project" id='projects' className='w-full md:h-screen lg:h-screen  bg-[#0a192f] text-gray-300 '>
+        <div className='w-full h-full max-w-[1300px]  mx-auto p-4 pb-10 flex flex-col justify-center '>
         <motion.div className='text-container'
             initial={{opacity: 0, scale: 0.2}}
-            animate={{ y: [-100], opacity: 1, scale: 1 }}
-            whileInView={{opacity:1,y:0}}
+            animate={{ x: [-100], opacity: 1, scale: 1 }}
+            whileInView={{opacity:1,x:0}}
             transition={{duration: 5,
               delay: 0.2,
               }}
@@ -44,7 +44,7 @@ const Projects = () => {
             </div>
 
            
-            <div  className='grid sm:grid-cols-2 md:grid-cols-3  gap-3 md:gap-y-6'>
+            <div  className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-3 md:gap-y-6 '>
 
 
 
@@ -55,7 +55,7 @@ const Projects = () => {
                     {/* Hover Effects */}
                     
                     <div className='opacity-0 transition duration-500 group-hover:opacity-100 '>
-                        <span className='text-2xl font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
+                        <span className='text-2xl text-center font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
                          Home Decoration Website
                         </span>
                         <div className='pt-8 text-center'>
@@ -75,7 +75,7 @@ const Projects = () => {
                     {/* Hover Effects */}
                     
                     <div className='opacity-0 group-hover:opacity-100'>
-                        <span className='text-2xl font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
+                        <span className='text-2xl text-center font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
                          React Travel Template 
                         </span>
                         <div className='pt-8 text-center'>
@@ -95,7 +95,7 @@ const Projects = () => {
                     {/* Hover Effects */}
                     
                     <div className='opacity-0 group-hover:opacity-100 '>
-                        <span className='text-2xl font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
+                        <span className='text-2xl text-center font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
                          University Website Template
                         </span>
                         <div className='pt-8 text-center'>
@@ -115,7 +115,7 @@ const Projects = () => {
                     {/* Hover Effects */}
                     
                     <div className='opacity-0 group-hover:opacity-100'>
-                        <span className='text-2xl font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
+                        <span className='text-2xl text-center font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
                          Sushi Website
                         </span>
                         <div className='pt-8 text-center'>
@@ -135,7 +135,7 @@ const Projects = () => {
                     {/* Hover Effects */}
                     
                     <div className='opacity-0 group-hover:opacity-100'>
-                        <span className='text-2xl font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
+                        <span className='text-2xl text-center font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
                          JavaScript Number Guess 
                         </span>
                         <div className='pt-8 text-center'>
@@ -155,7 +155,7 @@ const Projects = () => {
                     {/* Hover Effects */}
                     
                     <div className='opacity-0 group-hover:opacity-100'>
-                        <span className='text-2xl font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
+                        <span className='text-2xl text-center font-bold flex justify-center items-center text-pink-400 tracking-wider'> 
                          JavaScript Number Guess 
                         </span>
                         <div className='pt-8 text-center'>
