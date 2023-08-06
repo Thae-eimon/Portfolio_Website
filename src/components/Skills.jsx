@@ -12,19 +12,21 @@ import {motion} from 'framer-motion'
 
 const Skills = () => {
   return (
-    <div name="skills"  className='w-full lg:h-screen  bg-[#0a192f] text-gray-300'>
+    
+    <div name="skills"  className='w-full h-screen   bg-[#0a192f] text-gray-300'>
+       <motion.div className='text-container'
+    initial={{opacity: 0, scale: 0}}
+    animate={{ y: [50, 150, 50], opacity: 1, scale: 1 }}
+    whileInView={{opacity:1,y:0}}
+    transition={{duration: 4,
+      delay: 0.2,
+    }}
+    viewport={{once:true}}
+    
+    >
         {/* container */}
         <div className='w-full h-full max-w-[1300px] mx-auto p-3 flex flex-col justify-center '>
-        <motion.div className='text-container'
-            initial={{opacity: 0, scale: 0.2}}
-            animate={{ y: [50, 150, 50], opacity: 1, scale: 1 }}
-            whileInView={{opacity:1,y:0}}
-            transition={{duration: 4,
-              delay: 0.2,
-              ease: [0.5, 0.71, 1, 1.5],}}
-            viewport={{once:true}}
-            
-            >
+        
         <div className='md:text-center sm:text-right pb-8 pl-4 '>
                 <p className='text-4xl  font-bold inline border-b-4 border-pink-600 '>Skills</p>
                
@@ -63,9 +65,11 @@ const Skills = () => {
                     <p className='my-4'>TAILWIND</p>
                 </div>
             </div>
-            </motion.div>
+            
         </div>
+        </motion.div>
     </div>
+    
   )
 }
 
